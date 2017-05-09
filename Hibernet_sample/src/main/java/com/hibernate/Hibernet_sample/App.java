@@ -14,7 +14,6 @@ public class App
         SessionFactory sf=cfg.buildSessionFactory();
         Session session=sf.openSession();
         Transaction t=session.beginTransaction();
-        
         User user=new User("rajj","razz95.sahoo","12345");
         session.save(user);
         t.commit();
