@@ -5,10 +5,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -19,7 +15,7 @@ public class App
         Session session=sf.openSession();
         Transaction t=session.beginTransaction();
         
-        User user=new User(1, "swastin","swastin95.sahoo","12345");
+        User user=new User("rajj","razz95.sahoo","12345");
         session.save(user);
         t.commit();
         session.close();
