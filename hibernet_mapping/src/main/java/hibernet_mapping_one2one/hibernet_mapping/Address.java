@@ -16,12 +16,6 @@ public class Address {
 	public void setAid(Integer aid) {
 		this.aid = aid;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public String getPlotno() {
 		return plotno;
 	}
@@ -58,7 +52,26 @@ public class Address {
 	public void setPincode(Integer pincode) {
 		this.pincode = pincode;
 	}
-	public Address(String plotno, String ps, String distrect, String state, String country, Integer pincode) {
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Address(Integer aid, String plotno, String ps, String distrect, String state, String country,
+			Integer pincode, User user) {
+		super();
+		this.aid = aid;
+		this.plotno = plotno;
+		this.ps = ps;
+		this.distrect = distrect;
+		this.state = state;
+		this.country = country;
+		this.pincode = pincode;
+		this.user = user;
+	}
+	public Address(String plotno, String ps, String distrect, String state, String country, Integer pincode,
+			User user) {
 		super();
 		this.plotno = plotno;
 		this.ps = ps;
@@ -66,14 +79,11 @@ public class Address {
 		this.state = state;
 		this.country = country;
 		this.pincode = pincode;
+		this.user = user;
 	}
 	public Address() {
 		super();
 	}
-	@Override
-	public String toString() {
-		return "Address [plotno=" + plotno + ", ps=" + ps + ", distrect=" + distrect + ", state=" + state + ", country="
-				+ country + ", pincode=" + pincode + "]";
-	}
+
 	}
 
