@@ -2,6 +2,7 @@ package com.hbmapping;
 import java.util.Date;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
@@ -60,7 +61,8 @@ public class App
          * configuration setting
          */
     	Configuration cfg = new Configuration().configure();
-    	Session session=cfg.buildSessionFactory().openSession();
+    	SessionFactory sf=cfg.buildSessionFactory();
+    	Session session=sf.openSession();
     	Transaction tx=session.beginTransaction();
     	/**/
         session.save(address);
