@@ -65,10 +65,7 @@ public class App
     	Session session=sf.openSession();
     	Transaction tx=session.beginTransaction();
     	/**/
-        session.save(address);
-    	session.save(course);
-    	session.save(department);
-    	//session.save(faculty);
+        
     	session.save(student);
     	tx.commit();
     	session.close();

@@ -22,7 +22,7 @@ public class Faculty{
 	@OneToOne(cascade = {CascadeType.ALL})
 	private Address address;
 	private Date date_of_join;
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.ALL})
 	private Department department;
 	public Department getDepartment() {
 		return department;
